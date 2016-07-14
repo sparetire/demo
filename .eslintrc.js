@@ -40,6 +40,5 @@ module.exports = {
 	},
 	globals: {
 		console: false
-	},
-	plugins: ['vue']
+	}
 };
