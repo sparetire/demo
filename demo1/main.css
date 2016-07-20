@@ -1,0 +1,122 @@
+#div0 {
+	width: 800px;
+	height: 600px;
+	margin: auto;
+	margin-bottom: 20px;
+	border: 10px dotted #000;
+	background-color: red;
+}
+
+#div1 {
+	width: 800px;
+	height: 600px;
+	margin: auto;
+	margin-bottom: 20px;
+	border: 10px dotted #000;
+	background-image: url("bg.jpg");
+}
+
+#div2 {
+	width: 800px;
+	height: 600px;
+	margin: auto;
+	margin-bottom: 20px;
+	border: 10px dotted #000;
+	background-image: url("bg.jpg");
+	background-color: red;
+}
+
+#div3 {
+	width: 800px;
+	height: 600px;
+	margin: auto;
+	margin-bottom: 20px;
+	border: 10px dotted #000;
+	background-image: url("bg.jpg");
+	background-color: red;
+	background-repeat: space;
+}
+
+#div4 {
+	width: 800px;
+	height: 600px;
+	margin: auto;
+	margin-bottom: 20px;
+	border: 10px dotted #000;
+	background-image: url("bg.jpg");
+	background-color: red;
+	background-repeat: round;
+}
+
+#div5 {
+	width: 800px;
+	height: 600px;
+	margin: auto;
+	margin-bottom: 20px;
+	border: 10px dotted #000;
+	overflow: auto;
+	background-image: url("bg.jpg");
+}
+
+#div6 {
+	width: 800px;
+	height: 600px;
+	margin: auto;
+	margin-bottom: 20px;
+	border: 10px dotted #000;
+	overflow: auto;
+	background-image: url("bg.jpg");
+	background-attachment: fixed;
+}
+
+#div7 {
+	width: 800px;
+	height: 600px;
+	margin: auto;
+	margin-bottom: 20px;
+	border: 10px dotted #000;
+	overflow: auto;
+	background-image: url("bg.jpg");
+	background-attachment: local;
+}
+
+#div8 {
+	width: 800px;
+	height: 600px;
+	margin: auto;
+	margin-bottom: 20px;
+	border: 10px dotted #000;
+	background-image: url("bg.jpg");
+	background-position: 50px 50px;
+}
+
+#div9 {
+	width: 800px;
+	height: 600px;
+	margin: auto;
+	margin-bottom: 20px;
+	border: 10px dotted #000;
+	background-image: url("bg.jpg");
+	background-origin: border-box;
+}
+
+#div10 {
+	width: 800px;
+	height: 600px;
+	margin: auto;
+	margin-bottom: 20px;
+	border: 10px dotted #000;
+	background-image: url("bg.jpg");
+	background-origin: border-box;
+	background-clip: padding-box;
+}
+
+#div11 {
+	width: 800px;
+	height: 600px;
+	margin: auto;
+	margin-bottom: 20px;
+	border: 10px dotted #000;
+	background-image: url("bg.jpg");
+	background-size: cover;
+}
