@@ -1,0 +1,58 @@
+	#loading {
+		display: inline-block;
+		overflow: auto;
+		width: 48px;
+		height: 30px;
+		margin: auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+	}
+	
+	@keyframes loading {
+		0% {
+			transform: scaleY(0.5);
+		}
+		100% {
+			transform: scaleY(1);
+		}
+	}
+	
+	.col {
+		width: 5px;
+		height: 30px;
+		margin-right: 3px;
+		background-color: green;
+		border-radius: 5px;
+		float: left;
+		animation-name: loading;
+		animation-iteration-count: infinite;
+		animation-duration: 0.6s;
+		animation-direction: alternate;
+	}
+	
+	#col1 {
+		animation-delay: -0.6s;
+	}
+	
+	#col2 {
+		animation-delay: -0.5s;
+	}
+	
+	#col3 {
+		animation-delay: -0.4s;
+	}
+	
+	#col4 {
+		animation-delay: -0.3s;
+	}
+	
+	#col5 {
+		animation-delay: -0.2s;
+	}
+	
+	#col6 {
+		animation-delay: -0.1s;
+	}
