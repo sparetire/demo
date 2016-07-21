@@ -1,0 +1,39 @@
+#circle {
+	transform-origin: 150% 150%;
+	animation-name: circle;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes circle {
+	to {
+		transform: rotateZ(360deg);
+	}
+}
+
+@keyframes updown {
+	to {
+		/*注意这里的椭圆不是一个严格垂直方向的椭圆，
+		因为transform-origin的值不是在元素垂直方向*/
+		transform: translateY(300px);
+	}
+}
+
+#wrapper {
+	position: absolute;
+	top: 500px;
+	left: 500px;
+	animation-name: updown;
+	animation-timing-function: linear;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#ellipse {
+	transform-origin: 150% 150%;
+	animation-name: circle;
+	animation-timing-function: linear;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
