@@ -4,7 +4,7 @@
 	text-align: center;
 	line-height: 200px;
 	font-size: 38px;
-	border: 1px solid #000;
+	border: 5px solid #000;
 	position: absolute;
 	/*注意动画总是描述一个元素的一个状态到另一个状态的变化，
 	与类名 id无关，也就是说只要两个选择器表示了同一个元素的不同状态，
@@ -22,7 +22,7 @@
 	height: 800px;
 	/*透视一定要给到container而不是cube，
 	如果要做个立体，我们只应该对最外面的作为参考系的元素做透视*/
-	perspective: 1000px;
+	perspective: 800px;
 	transition-property: all;
 	transition-duration: 3s;
 }
@@ -96,7 +96,7 @@
 }
 
 #bottom {
-	transform-origin: 0 200px;
+	transform-origin: 0 210px;
 	animation-name: bottom;
 	animation-duration: 2s;
 	animation-fill-mode: forwards;
@@ -124,7 +124,7 @@
 }
 
 #right {
-	transform-origin: 200px 0;
+	transform-origin: 210px 0;
 	animation-name: right;
 	animation-duration: 2s;
 	animation-fill-mode: forwards;
@@ -159,13 +159,13 @@
 
 @keyframes front {
 	to {
-		transform: translateZ(200px);
+		transform: translateZ(205px);
 	}
 }
 
 @keyframes cube {
 	to {
-		/*旋转向量111*/
+		/*旋转向量111 */
 		transform: rotate3d(1, 1, 1, 360deg);
 	}
 }
