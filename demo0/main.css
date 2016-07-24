@@ -1,9 +1,9 @@
-.face {
-	width: 200px;
-	height: 200px;
-	text-align: center;
-	line-height: 200px;
-	font-size: 38px;
+.c-face {
+	width: 100px;
+	height: 100px;
+	/*text-align: center;
+	line-height: 100px;
+	font-size: 14px;*/
 	border: 5px solid #000;
 	position: absolute;
 	/*注意动画总是描述一个元素的一个状态到另一个状态的变化，
@@ -11,27 +11,34 @@
 	我们就可以给他动画，而不是一定要在同一个类名/id下指定两种不同状态才能用动画，
 	所以这里我们在face中用了动画而另一个状态用了cube的hover*/
 	transition-property: all;
-	transition-duration: 3s;
+	transition-duration: 2s;
+}
+
+.face-content {
+	text-align: center;
+	font-size: 14px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 
 /*这个container必须有，需要靠它来进行透视恢复正常的Z轴*/
 
-#container {
-	width: 100%;
-	height: 800px;
+#cube-container {
+	width: 180px;
+	height: 180px;
 	/*透视一定要给到container而不是cube，
 	如果要做个立体，我们只应该对最外面的作为参考系的元素做透视*/
-	perspective: 800px;
-	transition-property: all;
-	transition-duration: 3s;
+	perspective: 500px;
 }
 
 #cube {
 	/*宽高一定要给，因为透视中心旋转中心如果是默认，
   那就是50% 50%，是根据盒子宽高计算的*/
-	width: 200px;
-	height: 200px;
+	width: 100px;
+	height: 100px;
 	margin: auto;
 	top: 0;
 	bottom: 0;
@@ -53,31 +60,31 @@
 	animation-timing-function: linear;
 }
 
-#cube:hover>#top {
+#cube:hover>#c-top {
 	background: rgba(255, 0, 0, 0.5);
 }
 
-#cube:hover>#bottom {
+#cube:hover>#c-bottom {
 	background: rgba(0, 255, 0, 0.5);
 }
 
-#cube:hover>#left {
+#cube:hover>#c-left {
 	background: rgba(0, 0, 255, 0.5);
 }
 
-#cube:hover>#right {
+#cube:hover>#c-right {
 	background: rgba(128, 128, 0, 0.5);
 }
 
-#cube:hover>#front {
+#cube:hover>#c-front {
 	background: rgba(0, 148, 22, 0.5);
 }
 
-#cube:hover>#back {
+#cube:hover>#c-back {
 	background: rgba(50, 150, 200, 0.5);
 }
 
-#top {
+#c-top {
 	transform-origin: 0 0;
 	animation-name: top;
 	animation-duration: 2s;
@@ -91,8 +98,8 @@
 	}
 }
 
-#bottom {
-	transform-origin: 0 210px;
+#c-bottom {
+	transform-origin: 0 110px;
 	animation-name: bottom;
 	animation-duration: 2s;
 	animation-fill-mode: forwards;
@@ -105,7 +112,7 @@
 	}
 }
 
-#left {
+#c-left {
 	transform-origin: 0 0;
 	animation-name: left;
 	animation-duration: 2s;
@@ -119,8 +126,8 @@
 	}
 }
 
-#right {
-	transform-origin: 210px 0;
+#c-right {
+	transform-origin: 110px 0;
 	animation-name: right;
 	animation-duration: 2s;
 	animation-fill-mode: forwards;
@@ -133,7 +140,7 @@
 	}
 }
 
-#back {
+#c-back {
 	animation-name: back;
 	animation-duration: 2s;
 	animation-fill-mode: forwards;
@@ -146,7 +153,7 @@
 	}
 }
 
-#front {
+#c-front {
 	animation-name: front;
 	animation-duration: 2s;
 	animation-fill-mode: forwards;
@@ -155,13 +162,12 @@
 
 @keyframes front {
 	to {
-		transform: translateZ(205px);
+		transform: translateZ(110px);
 	}
 }
 
 @keyframes cube {
 	to {
-		/*旋转向量111 */
 		transform: rotate3d(1, 1, 1, 360deg);
 	}
 }
