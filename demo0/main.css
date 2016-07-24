@@ -1,9 +1,19 @@
+#logo:link, #logo:visited, #logo:hover, #logo:active {
+	text-decoration: none;
+	color: #000;
+}
+
+#logo {
+	display: inline-block;
+}
+
+.bg-holder {
+	background: #fff;
+}
+
 .c-face {
 	width: 100px;
 	height: 100px;
-	/*text-align: center;
-	line-height: 100px;
-	font-size: 14px;*/
 	border: 5px solid #000;
 	position: absolute;
 	/*注意动画总是描述一个元素的一个状态到另一个状态的变化，
@@ -16,22 +26,30 @@
 
 .face-content {
 	text-align: center;
-	font-size: 14px;
+	color: #444;
+	font-family: "Microsoft Yahei";
+	font-size: 24px;
+	font-weight: bold;
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+	transition: all 2s;
 }
 
 
 /*这个container必须有，需要靠它来进行透视恢复正常的Z轴*/
 
 #cube-container {
-	width: 180px;
-	height: 180px;
+	width: 150px;
+	height: 150px;
 	/*透视一定要给到container而不是cube，
 	如果要做个立体，我们只应该对最外面的作为参考系的元素做透视*/
 	perspective: 500px;
+	/*因为是在container透视的，而container的中心不是cube的中心
+	所以要加上一个边框宽度即150px/2+5px*/
+	perspective-origin: 80px 80px;
+	transform: scale3d(0.5, 0.5, 0.5);
 }
 
 #cube {
@@ -51,7 +69,7 @@
   所以这里让旋转中心和盒子中心重合*/
 	transform-origin: 0 0;
 	animation-name: cube;
-	animation-duration: 4s;
+	animation-duration: 3s;
 	/*等六个面动画完了以后再整个开始旋转*/
 	animation-delay: 12s;
 	/*一直旋转下去*/
@@ -60,28 +78,11 @@
 	animation-timing-function: linear;
 }
 
-#cube:hover>#c-top {
-	background: rgba(255, 0, 0, 0.5);
-}
-
-#cube:hover>#c-bottom {
-	background: rgba(0, 255, 0, 0.5);
-}
-
-#cube:hover>#c-left {
-	background: rgba(0, 0, 255, 0.5);
-}
-
-#cube:hover>#c-right {
-	background: rgba(128, 128, 0, 0.5);
-}
-
-#cube:hover>#c-front {
-	background: rgba(0, 148, 22, 0.5);
-}
-
-#cube:hover>#c-back {
-	background: rgba(50, 150, 200, 0.5);
+@keyframes cube {
+	to {
+		/*绕向量111旋转*/
+		transform: rotate3d(1, 1, 1, 360deg);
+	}
 }
 
 #c-top {
@@ -166,8 +167,30 @@
 	}
 }
 
-@keyframes cube {
-	to {
-		transform: rotate3d(1, 1, 1, 360deg);
-	}
+#cube:hover .face-content {
+	color: #eee;
+}
+
+#cube:hover>#c-top {
+	background: rgba(202, 199, 43, 0.5);
+}
+
+#cube:hover>#c-bottom {
+	background: rgba(235, 158, 38, 0.5);
+}
+
+#cube:hover>#c-left {
+	background: rgba(207, 68, 30, 0.5);
+}
+
+#cube:hover>#c-right {
+	background: rgba(116, 6, 61, 0.5);
+}
+
+#cube:hover>#c-front {
+	background: rgba(28, 16, 85, 0.5);
+}
+
+#cube:hover>#c-back {
+	background: rgba(12, 66, 102, 0.5);
 }
