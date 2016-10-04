@@ -1,0 +1,41 @@
+.triangle-1 {
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	border-top: 20px solid red;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	display: inline-block;
+}
+
+.triangle-2 {
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	border-top: 20px solid red;
+	border-right: 20px solid transparent;
+	display: inline-block;
+}
+
+.triangle-3 {
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	border-top: 60px solid red;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	display: inline-block;
+}
+
+.triangle-4 {
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	border-top: 60px solid red;
+	border-right: 20px solid transparent;
+	display: inline-block;
+}

@@ -10,7 +10,7 @@ $(function() {
 		}, 400, function() {
 			isAnimateComplete = true;
 		});
-	})
+	});
 });
 
 $(window).scroll(function(event) {
