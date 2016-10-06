@@ -39,3 +39,94 @@
 	border-right: 20px solid transparent;
 	display: inline-block;
 }
+
+.triangle-5 {
+	width: 10px;
+	font-size: 0;
+	line-height: 0;
+	border-top: 20px solid red;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	display: inline-block;
+}
+
+.triangle-6 {
+	width: 10px;
+	font-size: 0;
+	line-height: 0;
+	border-top: 20px solid red;
+	border-right: 20px solid transparent;
+	display: inline-block;
+}
+
+.triangle-7 {
+	width: 0;
+	height: 20px;
+	font-size: 0;
+	line-height: 0;
+	border-top: 20px solid red;
+	border-left: 20px solid red;
+	border-right: 20px solid red;
+	border-bottom: 20px solid transparent;
+	display: inline-block;
+}
+
+/********/
+.container-2 {
+	overflow: hidden;
+}
+.content-2 {
+	color: #555;
+	font-size: 14px;
+	background: #C59C53;
+	padding: 5px;
+	/**** 以下是必须 *****/
+	display: inline-block;
+	position: relative;
+}
+
+.content-2::after {
+	content: "";
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	border-top: 40px solid #C59C53;
+	border-right: 40px solid transparent;
+	position: absolute;
+	top: 0;
+}
+
+/*** 上一种方式可能会有三角和文案之间有空隙的情况以及无法很好地调整三角位置，三角可能覆盖文字 ***/
+.container-3 {
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+}
+
+.content-3 {
+	color: #555;
+	font-size: 14px;
+	background: #C59C53;
+	padding: 5px;
+	/*** 以下是必须 ***/
+	/*margin给三角留出位置*/
+	margin-right: 40px;
+	display: inline-block;
+	/*为了不让三角覆盖文字*/
+	position: relative;
+	z-index: 2;
+}
+
+.angle {
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	border-top: 40px solid #C59C53;
+	border-right: 40px solid transparent;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	z-index: 1;
+}

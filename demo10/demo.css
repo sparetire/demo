@@ -1,0 +1,21 @@
+.nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 200px;
+}
+
+.item {
+	border: 1px solid #000;
+}
+
+.sub-nav {
+	max-height: 0;
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+
+.item:hover > .sub-nav {
+	border-top: 1px solid #000;
+	max-height: 200px!important;
+}
