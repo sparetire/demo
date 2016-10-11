@@ -21,6 +21,7 @@
     "koa-bodyparser": "^2.2.0",
     "koa-multer": "0.0.2",
     "koa-router": "^5.4.0",
-    "koa-static": "^2.0.0"
+    "koa-static": "^2.0.0",
+    "slick-carousel": "^1.6.0"
   }
 }
