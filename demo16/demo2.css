@@ -1,0 +1,7 @@
+.red {
+	width: 48%;
+	height: 350px;
+	background: red;
+	float: left;
+	border: 1px solid #000;
+}

@@ -1,0 +1,275 @@
+body, figure, figcaption, h2, p, img {
+	margin: 0;
+	padding: 0;
+}
+
+@media (min-width: 1000px) {
+	figure {
+		width: 33.33%;
+		height: 350px;
+		float: left;
+		overflow: hidden;
+		position: relative;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+	figure {
+		width: 50%;
+		height: 350px;
+		float: left;
+		overflow: hidden;
+		position: relative;
+	}
+}
+
+@media (max-width: 600px) {
+	figure {
+		width: 100%;
+		height: 350px;
+		float: left;
+		overflow: hidden;
+		position: relative;
+	}
+}
+
+figcaption {
+	color: #fff;
+	font-family: "Microsoft Yahei";
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+/*figcaption>p {
+	transition: all 0.3s ease;
+}*/
+
+figure>img {
+	/* 注意是图片透明化，为了让背景色突出 */
+	opacity: 0.8;
+	transition: all 0.3s ease;
+}
+
+figure h2, figure p, figure div, span {
+	transition: all 0.3s ease;
+}
+
+
+/*******************/
+
+#figure0 {
+	/* 配合图片透明 */
+	background: #2f0000;
+}
+
+#figure0 figcaption {
+	margin: 20px;
+}
+
+#figure0:hover img {
+	transform: translate(-50px, 0);
+	opacity: 0.5;
+}
+
+#figure0 p {
+	color: #333;
+	padding: 3px;
+	margin: 3px;
+	border-radius: 3px;
+	text-align: center;
+	background: #fff;
+	transform: translate(-120px, 0);
+}
+
+#figure0:hover p {
+	transform: translate(0, 0);
+}
+
+#figure0 p:nth-of-type(2) {
+	transition-delay: 0.05s;
+}
+
+#figure0 p:nth-of-type(3) {
+	transition-delay: 0.1s;
+}
+
+
+/*******************/
+
+#figure1 {
+	background: #030;
+}
+
+#figure1 figcaption {
+	width: 100%;
+	/* 注意这个height一定要有,不然div会没有高度,div的高度80%是相对于它的高度,它是相对于figure的高度 */
+	height: 100%;
+}
+
+#figure1 h2 {
+	margin-top: 15%;
+	margin-left: 15%;
+}
+
+#figure1 p {
+	margin-left: 15%;
+	transform: translate(0, 50px);
+	opacity: 0;
+}
+
+#figure1 div {
+	width: 80%;
+	height: 80%;
+	border: 2px solid #fff;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	/* 这个rotate必须有,表明初始状态 */
+	transform: translate(0, -350px) rotate(0);
+}
+
+#figure1:hover div {
+	transform: translate(0, 0) rotate(360deg);
+}
+
+#figure1:hover img {
+	opacity: 0.5;
+}
+
+#figure1:hover p {
+	transform: translate(0, 0);
+	opacity: 1;
+}
+
+
+/********************/
+
+#figure2 {
+	background: #000;
+}
+
+#figure2 figcaption {
+	top: 30%;
+	left: 15%;
+}
+
+#figure2 h2, #figure2 p {
+	transform: skew(90deg);
+	opacity: 0;
+}
+
+#figure2:hover img {
+	opacity: 0.5;
+}
+
+#figure2:hover h2, #figure2:hover p {
+	transform: skew(0deg);
+	opacity: 1;
+}
+
+
+/*********************/
+
+#figure3 {
+	background: #000;
+}
+
+#figure3 figcaption {
+	width: 100%;
+	/* 注意这个height一定要有,不然div会没有高度,div的高度80%是相对于它的高度,它是相对于figure的高度 */
+	height: 100%;
+}
+
+#figure3 div {
+	width: 80%;
+	height: 80%;
+	border: 2px solid #fff;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	transform: scale(1.2);
+	opacity: 0;
+}
+
+#figure3 h2 {
+	margin-top: 15%;
+	margin-left: 15%;
+	opacity: 0;
+	transform: scale(1.1);
+}
+
+#figure3 p {
+	margin-top: 5px;
+	margin-left: 15%;
+	opacity: 0;
+	transform: scale(1.1);
+}
+
+#figure3:hover div {
+	transform: scale(1);
+	opacity: 1;
+}
+
+#figure3:hover img {
+	opacity: 0.5;
+	transform: scale(1.2);
+}
+
+#figure3:hover h2 {
+	opacity: 1;
+	transform: scale(1);
+}
+
+#figure3:hover p {
+	opacity: 1;
+	transform: scale(1);
+}
+
+
+/********************/
+
+#figure4 {
+	background: #000;
+}
+
+#figure4 figcaption {
+	width: 100%;
+	height: 100%;
+}
+
+#figure4 h2 {
+	margin-top: 15%;
+}
+
+#figure4 h2, #figure4 p {
+	margin-left: 15%;
+	opacity: 0;
+	transform: translate(0, 10px);
+}
+
+#figure4 div {
+	width: 120%;
+	height: 70%;
+	background: #fff;
+	position: absolute;
+	/*-50%和div高度刚好一致*/
+	bottom: -70%;
+	transform-origin: 0 0;
+	opacity: 0.7;
+}
+
+#figure4:hover div {
+	transform: rotate(-15deg);
+}
+
+#figure4:hover h2 {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+#figure4:hover p {
+	opacity: 1;
+	transform: translate(0, 0);
+}

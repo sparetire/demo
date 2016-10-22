@@ -1,0 +1,19 @@
+@media (min-width: 800px) {
+	.red {
+		width: 33%;
+		height: 350px;
+		background: red;
+		float: left;
+		border: 1px solid #000;
+	}
+}
+
+@media (min-width:500px) and (max-width:800px) {
+	.red {
+		width: 48%;
+		height: 350px;
+		background: red;
+		float: left;
+		border: 1px solid #000;
+	}
+}
