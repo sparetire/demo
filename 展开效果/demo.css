@@ -2,12 +2,15 @@
 	width: 300px;
 	border: 1px solid red;
 	max-height: 200px;
+	/* 为了触发GPU加速 */
+	transform: scaleY(1);
 	overflow: hidden;
 	transition: all 0.5s ease;
 }
 
 .open {
 	max-height: 800px!important;
+	transform: scaleY(1);
 }
 
 .footer {

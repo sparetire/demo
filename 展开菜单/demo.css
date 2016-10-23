@@ -11,11 +11,15 @@
 
 .sub-nav {
 	max-height: 0;
+	/* 为了触发GPU加速 */
+	transform-origin: 0 0;
+	transform: scaleY(0);
 	overflow: hidden;
 	transition: all 0.3s ease;
 }
 
 .item:hover > .sub-nav {
 	border-top: 1px solid #000;
+	transform: scaleY(1);
 	max-height: 200px!important;
 }
