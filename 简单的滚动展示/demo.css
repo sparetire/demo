@@ -1,0 +1,25 @@
+.wrapper {
+	width: 100%;
+	height: auto;
+	white-space: nowrap;
+	overflow: hidden;
+	overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  text-align: justify;
+}
+
+.wrapper::-webkit-scrollbar {
+	display: none;
+}
+
+.container {
+	float: left;
+}
+
+.item {
+	width: 100px;
+	height: 100px;
+	margin-right: 10px;
+	background: red;
+	display: inline-block;
+}
